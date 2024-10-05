@@ -1,0 +1,20 @@
+env: "local"
+storage_path: "./storage/storage.db"
+http_server:
+  address: "localhost:8000"
+  timeout: 4s
+  idle_timeout: 60s
+jwt:
+  access:
+    expire: 1h
+  refresh:
+    expire: 168h
+    cookie_name: "jwt_refresh"
+redis:
+  address: "localhost:6379"
+chat:
+  room:
+    capacity: 16
+  pong_wait: 5s
+  ping_period: 3s
+  write_wait: 10s
